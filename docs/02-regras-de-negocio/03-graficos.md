@@ -61,13 +61,14 @@ desenhos avançados) vem depois do loop social validado.
 ## 6. Fora do escopo deste módulo (v1)
 
 Multi-chart layouts; comparação de símbolos; replay de mercado; templates de indicadores;
-timeframes por segundos/custom; Heikin Ashi/Renko/etc.; tema claro/escuro custom por elemento
-(v1 tem tema escuro único, padrão do nicho); exportar dados.
+timeframes por segundos/custom; Heikin Ashi/Renko/etc.; customização de cores por elemento
+do gráfico; exportar dados.
+
+- **RN-M3-18 — temas**: o gráfico respeita o tema global claro/escuro da plataforma (RT-07),
+  com paletas próprias para cada tema (candles, grid, escalas); escuro é o padrão.
 
 ## 7. Pontos em aberto
 
-- **Q-M3-A**: tema escuro único na v1 confirma? (TradingView usa dark como padrão do público trader.)
-- **Q-M3-B**: se a licença gratuita da **Charting Library** completa do TradingView for aprovada
-  (risco técnico nº 2), ela substitui a implementação própria de desenhos/indicadores — decidir
-  se aguardamos a resposta antes de especificar M3 tecnicamente. *Default: seguir com Lightweight
-  Charts sem esperar.*
+- **Q-M3-A ✅** (2026-07-09, ADR-009): **tema claro + escuro desde a v1** — ver RT-07 e RN-M3-18.
+- **Q-M3-B ✅** (2026-07-09, ADR-009): **seguir com Lightweight Charts sem esperar** a resposta da
+  licença da Charting Library; se aprovada depois, reavaliamos o M3 por ADR.

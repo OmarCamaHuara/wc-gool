@@ -38,4 +38,4 @@ dentro da lista; importar/exportar; alertas a partir da watchlist (v1.1 junto co
 
 ## 4. Pontos em aberto
 
-- **Q-M6-A**: a watchlist padrão pré-carregada com BTC/ETH/SOL confirma? (Alternativa: vazia com CTA.)
+- **Q-M6-A ✅** (2026-07-09, ADR-009): confirmada a watchlist padrão **pré-carregada com BTC/ETH/SOL** (RN-M6-01).

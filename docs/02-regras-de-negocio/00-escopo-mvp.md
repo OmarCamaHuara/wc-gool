@@ -66,6 +66,9 @@ ver gráfico → montar análise → publicar ideia → receber boosts/comentár
   símbolos usam o padrão `EXCHANGE:PAIR` (ex.: `BINANCE:BTCUSDT`) (regra em M2).
 - **RT-06 — Limites free**: todo recurso criado por usuário tem limite explícito (ver módulo);
   os limites são as futuras alavancas de monetização.
+- **RT-07 — Temas**: a UI oferece **tema claro e tema escuro desde a v1** (ADR-009); escuro é o
+  padrão. Preferência persistida por usuário (localStorage para anônimos). Todo componente novo
+  deve ser homologado nos dois temas.
 
 ## 6. Métricas de sucesso do MVP (proposta)
 

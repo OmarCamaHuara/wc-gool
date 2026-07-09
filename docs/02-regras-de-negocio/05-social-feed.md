@@ -76,7 +76,7 @@ moderação por reputação/comunidade.
 
 ## 8. Pontos em aberto
 
-- **Q-M5-A**: quem modera no dia 1? (Presumo: o Omar como único admin — a ferramenta interna
-  precisa constar dos milestones.)
+- **Q-M5-A ✅** (2026-07-09, ADR-009): **Omar como único admin** no dia 1; ferramenta interna
+  mínima (fila de reports + ações) entra nos milestones. Papel de moderador multi-conta fica para v1.x.
 - **Q-M5-B**: e-mail transacional exige provedor (Resend/SES/Postmark...) — decidir na spec técnica;
   há restrição de custo? (ligado a T-05).

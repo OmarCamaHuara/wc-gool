@@ -71,11 +71,9 @@ co-autoria; ideias privadas/pagas; tradução automática; agendamento de public
 
 ## 6. Pontos em aberto
 
-- **Q-M4-A — score de acerto automático**: com direção + preço de publicação registrados (RN-M4-04),
-  dá para calcular objetivamente se a ideia "acertou" (ex.: variação após 7/30 dias) e montar um
-  ranking de autores. É poderoso, mas sensível (falsa precisão, gaming). **Entra na v1, v1.x ou não entra?**
-  *Default proposto: v1 apenas registra os dados (custo zero); exibição de score fica para v1.x com regra própria.*
-- **Q-M4-B**: campos estruturados opcionais de trade (entry, target, stop-loss) na publicação?
-  TradingView tem via desenho long/short. *Default proposto: v1.x, junto com o score.*
+- **Q-M4-A ✅** (2026-07-09, ADR-009): **v1 registra os dados** (direção + preço de publicação,
+  RN-M4-04); cálculo e exibição de score/ranking ficam para a **v1.x**, com regra própria contra gaming.
+- **Q-M4-B ✅** (2026-07-09, ADR-009): campos estruturados (entry/target/stop) entram na **v1.x**,
+  junto com o score — v1 publica só direção + tese.
 - **Q-M4-C**: idioma do conteúdo é livre (RT-03) — precisamos de filtro "ideas in my language" na
-  listagem global? *Default proposto: não na v1.*
+  listagem global? *Default mantido: não na v1.*

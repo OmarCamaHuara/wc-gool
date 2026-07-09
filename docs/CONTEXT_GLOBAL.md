@@ -2,19 +2,18 @@
 
 > Padrão da guia `hiria_pro`: memória institucional do projeto, atualizada ao fim de cada
 > rodada de trabalho. Leitura obrigatória (após `CONSTITUTION.md`) antes de qualquer tarefa.
-> Última atualização: 2026-07-09.
+> Última atualização: 2026-07-09 (2ª rodada).
 
 ---
 
 ## 1. Estado atual do projeto
 
-**Status:** Fase 1 — Regras de Negócio (em validação pelo CEO)
+**Status:** Fase 1 — Regras de Negócio (pontos em aberto resolvidos; falta validação final do escopo)
 
-- Fase 0 (descoberta + alinhamento) concluída: pesquisa de domínio feita, 4 decisões de
+- Fase 0 (descoberta + alinhamento) concluída: pesquisa de domínio feita, decisões de
   produto tomadas (ADR-004 a ADR-006, ADR-008).
-- Fase 1 em andamento: regras de negócio dos 6 módulos do MVP escritas
-  (`docs/02-regras-de-negocio/`), aguardando validação do CEO e resposta dos pontos em aberto
-  (`Q-M*` de cada módulo).
+- Fase 1: regras de negócio dos 6 módulos escritas e **todos os pontos em aberto Q-M*
+  resolvidos pelo CEO (ADR-009)** — destaque: tema claro + escuro desde a v1 (RT-07).
 - Nenhum código existe. Nenhuma Etapa de US foi criada ainda (Fase 3).
 
 ## 2. O produto em uma frase
@@ -58,10 +57,11 @@ ADR-008 (padrão hiria_pro). Histórico completo: `docs/DECISIONS.md`.
 
 ## 7. Pendências que bloqueiam a próxima fase
 
-1. Validação do CEO do escopo do MVP (`00-escopo-mvp.md`) e das regras M1–M6.
-2. Respostas aos pontos em aberto por módulo (Q-M1-A…Q-M6-A) — todos têm default proposto.
-3. Dúvidas 🟠 restantes: N-05 (monetização), N-06 (nome do produto), P-02 (idioma da doc),
-   P-03 (granularidade das US), T-05 (hospedagem/orçamento).
+1. Validação final do CEO do escopo do MVP (`00-escopo-mvp.md`) como contrato de escopo —
+   gate da passagem para a Fase 2 (CONSTITUTION §7).
+2. Dúvidas 🟠 restantes (não bloqueiam a Fase 2, mas ajudam): N-05 (monetização), N-06 (nome do
+   produto), P-02 (idioma da doc), P-03 (granularidade das US), T-05 (hospedagem/orçamento —
+   necessária ANTES de fechar a spec técnica).
 
 ## 8. Riscos ativos
 
@@ -76,3 +76,4 @@ ADR-008 (padrão hiria_pro). Histórico completo: `docs/DECISIONS.md`.
 |---|---|
 | 2026-07-07 | Criação do repositório de docs; Fase 0 iniciada |
 | 2026-07-09 | Decisões de produto tomadas (ADR-004..006); regras M1–M6 escritas; adoção do padrão hiria_pro (ADR-008) |
+| 2026-07-09 | Pontos em aberto Q-M* resolvidos (ADR-009); tema claro+escuro na v1 (RT-07/RN-M3-18) |

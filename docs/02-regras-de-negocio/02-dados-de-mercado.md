@@ -74,6 +74,6 @@ página do símbolo); notícias; calendário.
 
 ## 7. Pontos em aberto
 
-- **Q-M2-A**: o corte "top ~200 por volume" atende? (Alternativa: todos os pares USDT ativos, ~400+.)
-- **Q-M2-B**: exibir preços em moeda de preferência do usuário (conversão USD→EUR/BRL) fica para v1.x?
-  *Default proposto: v1 mostra tudo em USDT, sem conversão.*
+- **Q-M2-A ✅** (2026-07-09, ADR-009): confirmado **top ~200 por volume**.
+- **Q-M2-B ✅** (2026-07-09, ADR-009): confirmado **tudo em USDT na v1**, sem conversão de moeda
+  (conversão de preferência do usuário fica para v1.x).

@@ -77,3 +77,27 @@
   `US-XXXX-B/F/D` (backend/frontend/docs).
 - **Supersede:** ADR-007.
 - **Status:** `active`
+
+## ADR-009 — Resolução dos pontos em aberto da Fase 1 (Q-M*)
+
+- **Data:** 2026-07-09
+- **Contexto:** as regras de negócio M1–M6 foram escritas com pontos em aberto (`Q-M*`),
+  cada um com default proposto. O CEO respondeu todos os relevantes em sessão.
+- **Decisão:**
+  - **Q-M2-A**: catálogo v1 = top ~200 pares USDT por volume (default confirmado).
+  - **Q-M2-B**: preços exibidos em USDT, sem conversão de moeda na v1 (default confirmado).
+  - **Q-M3-A**: **tema claro + escuro desde a v1** (⚠️ default vetado — o default era escuro único);
+    escuro permanece o padrão inicial. Nova regra RT-07 e RN-M3-18.
+  - **Q-M3-B**: especificação segue com Lightweight Charts sem aguardar a licença da Charting
+    Library do TradingView (default confirmado).
+  - **Q-M4-A**: v1 registra direção + preço de publicação; score de acerto e ranking de autores
+    ficam para v1.x com regra anti-gaming própria (default confirmado).
+  - **Q-M4-B**: campos estruturados de trade (entry/target/stop) na v1.x, junto com o score
+    (default confirmado).
+  - **Q-M5-A**: moderação no dia 1 = Omar como único admin; ferramenta interna mínima no MVP
+    (default confirmado).
+  - **Q-M6-A**: watchlist padrão pré-carregada com BTC/ETH/SOL (default confirmado).
+  - Defaults mantidos sem consulta (baixo impacto): Q-M1-A (rota `/u/{username}`),
+    Q-M4-C (sem filtro de idioma na listagem global).
+- **Justificativa:** respostas diretas do CEO via sessão de alinhamento de 2026-07-09.
+- **Status:** `active`
