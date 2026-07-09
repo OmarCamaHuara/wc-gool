@@ -56,6 +56,13 @@ real? A resposta muda decisões de arquitetura e a estratégia regulatória desd
 "wc-gool" é o nome do repositório — é também o nome do produto? Tem marca/nome em mente?
 (Impacta domínio, textos da documentação e identidade visual.)
 
+### N-08 🟠 Quais features de IA entram na v1?
+A investigação [`00-descoberta/05-ia-nos-concorrentes.md`](../00-descoberta/05-ia-nos-concorrentes.md)
+mostrou que o setor virou "AI-first" em 2025–2026 e mapeou 6 candidatas (F-IA-1 a F-IA-6).
+**Proposta**: v1 leva **F-IA-1 (TL;DR de ideia)** e **F-IA-5 (moderação assistida)** — as duas
+mais baratas e que usam nosso dado proprietário; copiloto de gráfico (F-IA-3) e pulso do
+símbolo (F-IA-2) na v1.x. Confirmar ou ajustar.
+
 ### N-07 🟢 O que existe hoje?
 Isso é um projeto do zero, certo? Existe algo já feito (design, pesquisa, público, comunidade,
 sócios)? Existe prazo ou evento-alvo (ex.: lançar em X meses)?
@@ -89,6 +96,12 @@ aceitável para o MVP? (Estimei USD 25–150/mês no doc técnico.) Isso poda de
 
 ### T-07 🟢 Autenticação
 **Default proposto**: e-mail/senha + login Google (OAuth2), JWT.
+
+### T-08 🟠 Provedor de LLM e orçamento de API
+Depende de N-08. Qual provedor de LLM para as features de IA (Anthropic/Claude, OpenAI,
+Google/Gemini, modelos abertos) e qual teto de gasto mensal com API no MVP?
+**Default proposto**: decidir o provedor na Fase 2 com PoC comparativa; arquitetura trata o
+LLM como plugável; teto inicial sugerido: USD 50/mês (features baratas F-IA-1/F-IA-5 cabem).
 
 ---
 

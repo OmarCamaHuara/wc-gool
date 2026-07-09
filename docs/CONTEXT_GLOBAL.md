@@ -60,8 +60,9 @@ ADR-008 (padrão hiria_pro). Histórico completo: `docs/DECISIONS.md`.
 1. Validação final do CEO do escopo do MVP (`00-escopo-mvp.md`) como contrato de escopo —
    gate da passagem para a Fase 2 (CONSTITUTION §7).
 2. Dúvidas 🟠 restantes (não bloqueiam a Fase 2, mas ajudam): N-05 (monetização), N-06 (nome do
-   produto), P-02 (idioma da doc), P-03 (granularidade das US), T-05 (hospedagem/orçamento —
-   necessária ANTES de fechar a spec técnica).
+   produto), N-08 (features de IA na v1), P-02 (idioma da doc), P-03 (granularidade das US),
+   T-05 (hospedagem/orçamento) e T-08 (provedor/orçamento de LLM) — T-05 e T-08 necessárias
+   ANTES de fechar a spec técnica.
 
 ## 8. Riscos ativos
 
@@ -77,3 +78,4 @@ ADR-008 (padrão hiria_pro). Histórico completo: `docs/DECISIONS.md`.
 | 2026-07-07 | Criação do repositório de docs; Fase 0 iniciada |
 | 2026-07-09 | Decisões de produto tomadas (ADR-004..006); regras M1–M6 escritas; adoção do padrão hiria_pro (ADR-008) |
 | 2026-07-09 | Pontos em aberto Q-M* resolvidos (ADR-009); tema claro+escuro na v1 (RT-07/RN-M3-18) |
+| 2026-07-09 | Investigação de IA nos concorrentes (`00-descoberta/05`); candidatas F-IA-1..6 e novas dúvidas N-08/T-08 |
