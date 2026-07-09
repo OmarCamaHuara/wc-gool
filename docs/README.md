@@ -3,40 +3,39 @@
 > Repositório de **documentação apenas**. Nenhum código de aplicação vive aqui.
 > O objetivo é produzir regras de negócio e especificações tão detalhadas que
 > qualquer LLM consiga executar cada micro-tarefa de implementação sem contexto adicional.
+> Governança no padrão da guia [`hiria_pro`](https://github.com/OmarCamaHuara/hiria_pro) (ADR-008).
+
+## Comece por aqui (ordem de leitura obrigatória para agentes)
+
+1. [`CONSTITUTION.md`](CONSTITUTION.md) — regras imutáveis e governança
+2. [`CONTEXT_GLOBAL.md`](CONTEXT_GLOBAL.md) — memória viva: estado atual, pendências, riscos
+3. [`DECISIONS.md`](DECISIONS.md) — registro de decisões (ADRs, append-only)
+4. O documento da tarefa em questão
 
 ## Estado atual
 
-**Fase 0 — Descoberta e Alinhamento** (em andamento)
-
-Nesta fase ainda NÃO definimos escopo, arquitetura ou milestones. Estamos:
-1. ✅ Recopilando informação sobre o domínio (TradingView e concorrentes)
-2. 🔄 Levantando dúvidas para alinhar a visão de produto
-3. ⏳ Aguardando respostas para consolidar as regras de negócio
+**Fase 1 — Regras de Negócio** (escritas, em validação pelo CEO)
 
 ## Estrutura
 
-| Pasta | Conteúdo |
-|---|---|
-| `00-descoberta/` | Pesquisa de domínio: análise do TradingView, concorrentes e considerações técnicas |
-| `01-alinhamento/` | Dúvidas abertas e registro de decisões (fonte da verdade das escolhas do produto) |
+| Caminho | Conteúdo | Fase |
+|---|---|---|
+| [`CONSTITUTION.md`](CONSTITUTION.md) | Regras imutáveis, stack, método, convenções de US | — |
+| [`CONTEXT_GLOBAL.md`](CONTEXT_GLOBAL.md) | Memória viva do projeto | — |
+| [`DECISIONS.md`](DECISIONS.md) | ADRs | — |
+| [`00-descoberta/`](00-descoberta/) | Pesquisa: TradingView, concorrentes, considerações técnicas | 0 ✅ |
+| [`01-alinhamento/duvidas-e-decisoes.md`](01-alinhamento/duvidas-e-decisoes.md) | Dúvidas abertas (respondidas viram ADR) | contínuo |
+| [`02-regras-de-negocio/`](02-regras-de-negocio/) | Escopo do MVP + regras dos módulos M1–M6 | 1 🔄 |
+| `03-especificacao-tecnica/` | (a criar) arquitetura, modelo de dados, contratos de API | 2 ⏳ |
+| [`../US_BySteps/`](../US_BySteps/) | Micro-tarefas por Etapa | 3 ⏳ |
 
-### Documentos da Fase 0
+### Regras de negócio (Fase 1)
 
-1. [`00-descoberta/01-visao-geral.md`](00-descoberta/01-visao-geral.md) — O que estamos construindo e por quê
-2. [`00-descoberta/02-analise-tradingview.md`](00-descoberta/02-analise-tradingview.md) — Anatomia completa do TradingView (funcionalidades, modelo de negócio)
-3. [`00-descoberta/03-analise-concorrentes.md`](00-descoberta/03-analise-concorrentes.md) — Plataformas com dinâmica similar e o diferencial de cada uma
-4. [`00-descoberta/04-consideracoes-tecnicas.md`](00-descoberta/04-consideracoes-tecnicas.md) — Desafios técnicos do domínio com a stack Java + React
-5. [`01-alinhamento/duvidas-e-decisoes.md`](01-alinhamento/duvidas-e-decisoes.md) — **Dúvidas que precisam de resposta antes do planejamento**
+1. [`02-regras-de-negocio/00-escopo-mvp.md`](02-regras-de-negocio/00-escopo-mvp.md) — o contrato de escopo
+2. [`01-usuarios-e-perfis.md`](02-regras-de-negocio/01-usuarios-e-perfis.md) · [`02-dados-de-mercado.md`](02-regras-de-negocio/02-dados-de-mercado.md) · [`03-graficos.md`](02-regras-de-negocio/03-graficos.md) · [`04-ideias.md`](02-regras-de-negocio/04-ideias.md) · [`05-social-feed.md`](02-regras-de-negocio/05-social-feed.md) · [`06-watchlists.md`](02-regras-de-negocio/06-watchlists.md)
 
 ## Convenções
 
-- **Stack definida**: Java (backend) + React (frontend). Detalhes de versão/frameworks ainda em aberto (ver dúvidas).
-- **Idioma**: documentação em português (PT-BR).
-- **Guia de estrutura**: seguirá o padrão do repositório `OmarCamaHuara/hiria_pro` (pendente de acesso — ver dúvida P-01).
-- Cada decisão tomada sai do documento de dúvidas e vira uma entrada numerada no registro de decisões.
-
-## Próximas fases (após alinhamento)
-
-1. **Fase 1 — Regras de Negócio**: especificação funcional de cada módulo do MVP
-2. **Fase 2 — Especificação Técnica**: arquitetura, modelo de dados, contratos de API
-3. **Fase 3 — Milestones e Micro-tarefas**: quebra em tarefas atômicas executáveis por LLM
+- **Idioma da documentação**: PT-BR (dúvida P-02 em aberto); UI do produto em inglês (ADR-006).
+- Regras numeradas: `RT-XX` (transversais), `RN-M{n}-XX` (por módulo), `Q-M{n}-X` (pontos em aberto).
+- Toda decisão vira ADR em `DECISIONS.md`; dúvidas vivem em `01-alinhamento/duvidas-e-decisoes.md`.

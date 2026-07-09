@@ -10,14 +10,10 @@ Legenda de prioridade: 🔴 bloqueia o planejamento · 🟠 importante, mas tem 
 
 ## P — Processo e documentação
 
-### P-01 🔴 Acesso à guia `hiria_pro`
-Tentei acessar `https://github.com/OmarCamaHuara/hiria_pro` e recebi 404 — o repositório é privado
-e a ferramenta de adicioná-lo à sessão falhou repetidamente por instabilidade de conexão.
-**Preciso de uma destas opções:**
-- (a) você adiciona o repo `hiria_pro` a esta sessão / torna acessível; ou
-- (b) você cola aqui a estrutura de pastas + um documento de exemplo dele; ou
-- (c) me autoriza a propor uma estrutura própria (que depois adaptamos à guia).
-*Enquanto isso segui com uma estrutura provisória (`00-descoberta/`, `01-alinhamento/`).*
+### P-01 ✅ Acesso à guia `hiria_pro`
+**Respondida em 2026-07-09 → ADR-007, superseded por ADR-008**: o repositório foi tornado
+público no mesmo dia; a guia foi estudada e seu padrão adotado (CONSTITUTION + CONTEXT_GLOBAL +
+DECISIONS em ADR + `US_BySteps/Etapa-XXX`).
 
 ### P-02 🟠 Idioma da documentação
 Estou escrevendo em PT-BR. Confirma? (Alternativas: espanhol, inglês, ou PT para negócio +
@@ -36,23 +32,15 @@ Milestones deste repo; (c) GitHub Projects. Sugestão: (a) como fonte da verdade
 
 ## N — Negócio e produto
 
-### N-01 🔴 Qual é o pilar central do produto?
-O TradingView tem ~10 pilares (ver visão geral). Um MVP precisa escolher UM núcleo.
-Qual destas frases descreve melhor o seu sonho?
-- (a) "Um TradingView": **gráficos excelentes** + ideias sociais em volta.
-- (b) "Um StockTwits": **rede social** de traders (posts por ativo, sentimento), gráficos simples.
-- (c) "Um eToro sem dinheiro": **paper trading + ranking público** — competição de performance simulada.
-- (d) Outra visão sua (descreva com suas palavras, sem se prender aos exemplos).
+### N-01 ✅ Qual é o pilar central do produto?
+**Respondida em 2026-07-09 → D-004**: modelo TradingView — **gráficos excelentes + ideias sociais**
+(análises publicadas com gráfico anotado) em volta.
 
-### N-02 🔴 Quais mercados/ativos na v1?
-- (a) Só **cripto** (dados em tempo real gratuitos — caminho mais barato e rápido);
-- (b) Cripto + ações US delayed;
-- (c) Foco em **B3/Brasil** (nicho mal servido, mas dados mais difíceis);
-- (d) Tudo (não recomendado para MVP).
+### N-02 ✅ Quais mercados/ativos na v1?
+**Respondida em 2026-07-09 → D-005**: **somente cripto** na v1 (dados em tempo real gratuitos).
 
-### N-03 🔴 Público-alvo e idioma da plataforma
-Quem é o usuário nº 1? Trader iniciante ou experiente? Brasil, América Latina (espanhol — você
-mandou o link `es.tradingview.com`), ou global (inglês)? Isso define idioma da UI, dos conteúdos e o marketing.
+### N-03 ✅ Público-alvo e idioma da plataforma
+**Respondida em 2026-07-09 → D-006**: **global, UI em inglês**, com i18n para PT/ES em fase posterior.
 
 ### N-04 🟠 Copy trading / execução real está no horizonte?
 Mesmo que não seja MVP: o plano de longo prazo inclui executar ordens ou copy trading com dinheiro
@@ -106,8 +94,5 @@ aceitável para o MVP? (Estimei USD 25–150/mês no doc técnico.) Isso poda de
 
 ## Registro de Decisões
 
-| # | Data | Decisão | Origem |
-|---|---|---|---|
-| D-001 | 2026-07-07 | Stack: Java no backend, React no frontend | Definido pelo Omar no kickoff |
-| D-002 | 2026-07-07 | Este repositório conterá somente documentação; código virá depois, guiado por micro-tarefas executáveis por LLM | Definido pelo Omar no kickoff |
-| D-003 | 2026-07-07 | Método: primeiro recopilar informação → alinhar dúvidas → só então escrever regras de negócio sólidas | Definido pelo Omar no kickoff |
+Movido para [`../DECISIONS.md`](../DECISIONS.md) no formato ADR do padrão `hiria_pro` (ADR-008).
+As referências D-001…D-007 deste documento correspondem a ADR-001…ADR-007.
