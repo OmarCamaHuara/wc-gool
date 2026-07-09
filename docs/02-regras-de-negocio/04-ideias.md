@@ -64,6 +64,18 @@ DRAFT (opcional) → PUBLISHED → (UPDATED com anexos) → ARCHIVED_BY_MODERATI
   snapshot é a imagem do card). São a principal porta de aquisição orgânica (persona Visitante).
 - **RN-M4-14**: ideias de símbolo `DELISTED` permanecem acessíveis (RN-M2-03), com aviso.
 
+## 4.1 IA na ideia (ADR-010)
+
+- **RN-M4-15 — TL;DR por IA**: ao publicar, o sistema gera um resumo de até 200 caracteres da
+  tese, exibido no topo da página da ideia e nos cards de listagem, com rótulo explícito
+  "AI summary". Gerado **uma única vez** (a ideia é imutável) e cacheado; falha na geração
+  **não bloqueia** a publicação (ideia fica sem resumo e um retry assíncrono tenta depois).
+- **RN-M4-16 — tradução sob demanda**: botão "Translate" na página da ideia traduz tese e
+  updates para o idioma do leitor via IA, com rótulo "AI translation"; resultado cacheado por
+  idioma. O original é sempre acessível.
+- **RN-M4-17**: todo texto gerado por IA neste módulo segue RT-08 (explica/resume, nunca
+  recomenda; nunca se passa por conteúdo do autor).
+
 ## 5. Fora do escopo deste módulo (v1)
 
 Minds (posts curtos por símbolo — StockTwits-like; candidato forte a v1.x); ideias em vídeo;

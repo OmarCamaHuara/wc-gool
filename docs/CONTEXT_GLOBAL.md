@@ -60,16 +60,18 @@ ADR-008 (padrão hiria_pro). Histórico completo: `docs/DECISIONS.md`.
 1. Validação final do CEO do escopo do MVP (`00-escopo-mvp.md`) como contrato de escopo —
    gate da passagem para a Fase 2 (CONSTITUTION §7).
 2. Dúvidas 🟠 restantes (não bloqueiam a Fase 2, mas ajudam): N-05 (monetização), N-06 (nome do
-   produto), N-08 (features de IA na v1), P-02 (idioma da doc), P-03 (granularidade das US),
-   T-05 (hospedagem/orçamento) e T-08 (provedor/orçamento de LLM) — T-05 e T-08 necessárias
-   ANTES de fechar a spec técnica.
+   produto), P-02 (idioma da doc), P-03 (granularidade das US) e T-05 (hospedagem/orçamento —
+   necessária ANTES de fechar a spec técnica; agora inclui a infra de inferência do LLM
+   self-hosted, ADR-010).
 
 ## 8. Riscos ativos
 
 1. Rate limits da fonte de dados gratuita (validar cedo — RN-M2-16).
 2. Desenhos no gráfico são implementação própria sobre Lightweight Charts (custo alto — M3 §4).
 3. Licença da Charting Library completa do TradingView: pedir cedo; muda o custo de M3 (Q-M3-B).
-4. Moderação de conteúdo com um único admin (Q-M5-A).
+4. Moderação de conteúdo com um único admin (Q-M5-A) — mitigado pela moderação assistida por IA (RN-M5-26).
+5. LLM self-hosted (ADR-010): custo/complexidade da infra de inferência a validar na Fase 2;
+   fallback plugável para API gerenciada previsto.
 
 ## 9. Histórico de atualizações
 
@@ -79,3 +81,4 @@ ADR-008 (padrão hiria_pro). Histórico completo: `docs/DECISIONS.md`.
 | 2026-07-09 | Decisões de produto tomadas (ADR-004..006); regras M1–M6 escritas; adoção do padrão hiria_pro (ADR-008) |
 | 2026-07-09 | Pontos em aberto Q-M* resolvidos (ADR-009); tema claro+escuro na v1 (RT-07/RN-M3-18) |
 | 2026-07-09 | Investigação de IA nos concorrentes (`00-descoberta/05`); candidatas F-IA-1..6 e novas dúvidas N-08/T-08 |
+| 2026-07-09 | ADR-010: IA na v1 (TL;DR de ideias RN-M4-15..17 + moderação assistida RN-M5-26); RT-08; LLM aberto self-hosted |

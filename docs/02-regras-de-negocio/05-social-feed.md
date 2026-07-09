@@ -66,7 +66,13 @@
   ou promessas de lucro; links de referral/afiliados; esquemas (pump groups); assédio; spam;
   conteúdo sem relação com mercados. Documento público completo a redigir antes do lançamento.
 - **RN-M5-25 — automações mínimas anti-spam**: bloquear links repetidos + conta recém-criada
-  postando links em série → flag automático para a fila. (Nada de ML na v1.)
+  postando links em série → flag automático para a fila.
+- **RN-M5-26 — moderação assistida por IA (ADR-010)**: todo report (RN-M5-21) e todo conteúdo
+  flagrado por heurística (RN-M5-25) é pré-classificado por IA (categoria provável + confiança)
+  para **priorizar a fila** do admin. Conteúdo com alta confiança de scam/spam pode ser
+  **ocultado preventivamente** ("under review"), mas **nenhuma remoção ou suspensão definitiva é
+  automática** — a decisão final é sempre humana na v1. Classificações da IA ficam registradas
+  no audit log (RN-M5-23) junto com a decisão humana, para calibração futura.
 
 ## 7. Fora do escopo deste módulo (v1)
 

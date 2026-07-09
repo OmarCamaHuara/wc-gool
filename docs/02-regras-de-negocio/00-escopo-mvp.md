@@ -69,6 +69,10 @@ ver gráfico → montar análise → publicar ideia → receber boosts/comentár
 - **RT-07 — Temas**: a UI oferece **tema claro e tema escuro desde a v1** (ADR-009); escuro é o
   padrão. Preferência persistida por usuário (localStorage para anônimos). Todo componente novo
   deve ser homologado nos dois temas.
+- **RT-08 — Princípios de IA** (ADR-010): (a) IA **explica/resume, nunca recomenda** compra ou
+  venda; (b) conteúdo gerado por IA é sempre **rotulado** como tal e nunca se passa por conteúdo
+  de usuário — ideias são 100% humanas; (c) toda feature de IA nasce com **limite de uso e
+  cache** (RT-06); (d) falha do serviço de IA **nunca bloqueia** o fluxo principal do usuário.
 
 ## 6. Métricas de sucesso do MVP (proposta)
 

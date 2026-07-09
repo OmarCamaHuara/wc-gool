@@ -101,3 +101,29 @@
     Q-M4-C (sem filtro de idioma na listagem global).
 - **Justificativa:** respostas diretas do CEO via sessão de alinhamento de 2026-07-09.
 - **Status:** `active`
+
+## ADR-010 — IA na v1: TL;DR de ideias + moderação assistida, com LLM aberto self-hosted
+
+- **Data:** 2026-07-09
+- **Contexto:** a investigação `00-descoberta/05-ia-nos-concorrentes.md` mostrou o setor
+  "AI-first" (TradingView Copilot, eToro Tori, Robinhood Cortex etc.) e mapeou 6 features
+  candidatas (F-IA-1..6). Era preciso decidir o recorte da v1 e a estratégia de LLM.
+- **Decisão:**
+  1. **v1 inclui**: F-IA-1 (TL;DR de ideia + tradução sob demanda → RN-M4-15/16/17) e
+     F-IA-5 (moderação assistida → RN-M5-26).
+  2. **v1.x**: F-IA-2 (pulso do símbolo), F-IA-3 (copiloto de gráfico), F-IA-4 (digest IA).
+     **v2**: F-IA-6 (alertas em linguagem natural). **Nunca**: agentes que operam/picks de IA
+     (CONSTITUTION §2.2).
+  3. **LLM: modelos abertos self-hosted** (ex.: família Llama/Mistral em infraestrutura própria).
+  4. Princípios de IA consolidados na regra transversal **RT-08** (explica não recomenda;
+     rotulagem obrigatória; limites+cache; falha de IA não bloqueia fluxo).
+- **Alternativas rejeitadas:** provedor gerenciado (Anthropic/OpenAI, decidir na Fase 2) —
+  o CEO optou por self-hosted.
+- **Restrições derivadas / riscos assumidos:**
+  - Self-hosting adiciona um requisito de infra (GPU dedicada ou inferência quantizada em CPU)
+    que **deve entrar no orçamento de T-05** — estimativa a validar na Fase 2 (~USD 30–300/mês
+    conforme abordagem). As tarefas F-IA-1/5 (resumo e classificação) são viáveis em modelos
+    abertos pequenos (7–8B quantizados).
+  - A Fase 2 deve especificar a camada de inferência como serviço isolado e plugável, para que
+    a troca por API gerenciada (fallback) não afete os módulos.
+- **Status:** `active`
